@@ -1,0 +1,4 @@
+# Ignore NXT executable files, RIC edit data and Gedit backup files.
+*.rxe
+*.RPA
+*~
