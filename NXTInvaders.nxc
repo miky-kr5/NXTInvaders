@@ -321,15 +321,16 @@ void render(){
     ClearScreen();
     // Render informative text.
     TextOut(0, LCD_LINE1, "LIVES:");
-    //NumOut(35, LCD_LINE1, player.lives);
     params[0] = 35;
-    GraphicOutEx(0, LCD_LINE1 + 1, "ship.ric", params);
-    if(player.lives > 1){
-      params[0] = 44;
+    if(player.lives > 0){
       GraphicOutEx(0, LCD_LINE1 + 1, "ship.ric", params);
-      if(player.lives > 2){
-        params[0] = 53;
+      if(player.lives > 1){
+        params[0] = 44;
         GraphicOutEx(0, LCD_LINE1 + 1, "ship.ric", params);
+        if(player.lives > 2){
+          params[0] = 53;
+          GraphicOutEx(0, LCD_LINE1 + 1, "ship.ric", params);
+        }
       }
     }
     TextOut(0, LCD_LINE2, "SCORE:");
